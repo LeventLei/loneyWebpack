@@ -1,6 +1,15 @@
 {
-  "presets": [["@babel/preset-env", { "debug": true, "useBuiltIns": "usage" }]],
+  "presets": [["@babel/preset-env", { "debug": true }]],
   "plugins": [
-    ["@babel/plugin-proposal-decorators", { "decoratorsBeforeExport": true }]
+    ["@babel/plugin-proposal-decorators", { "decoratorsBeforeExport": true }],
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 2,
+        "helpers": true,
+        "regenerator": true,
+        "useESModules": false
+      }
+    ]
   ]
 }
